@@ -127,8 +127,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
-# Spyder project settings
+dpp_venv
+.Spyder project settings
 .spyderproject
 .spyproject
 
