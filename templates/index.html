@@ -6,55 +6,89 @@
   <title>Diamond Price Predictor</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #f0f2f5, #e3eaf0);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+      margin: 0;
+      padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
     }
 
     .container {
+      background-color: white;
+      padding: 40px 50px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
       text-align: center;
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 90%;
     }
 
     h1 {
-      margin-bottom: 20px;
-      font-size: 32px;
-      color: #333;
+      font-size: 36px;
+      color: #2c3e50;
+      margin-bottom: 15px;
     }
 
     p {
-      color: #666;
       font-size: 18px;
+      color: #555;
       margin-bottom: 30px;
     }
 
-    a.button {
+    .button {
       text-decoration: none;
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 16px;
       background-color: #007bff;
       color: white;
-      padding: 12px 24px;
-      border-radius: 6px;
-      font-size: 16px;
-      transition: background-color 0.3s;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
     }
 
-    a.button:hover {
+    .button:hover {
       background-color: #0056b3;
+    }
+
+    .error-message {
+      margin-top: 25px;
+      color: #d8000c;
+      background-color: #ffd2d2;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .back-button {
+      margin-top: 20px;
+      display: inline-block;
+      background-color: #6c757d;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .back-button:hover {
+      background-color: #495057;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to Diamond Price Predictor</h1>
-    <p>Predict the price of a diamond based on its attributes</p>
+    <h1>💎 Welcome to Diamond Price Predictor</h1>
+    <p>Predict the price of a diamond based on its attributes.</p>
     <a class="button" href="{{ url_for('predict_datapoint') }}">Go to Prediction Form</a>
+
+    {% if error_message %}
+      <div class="error-message">
+        ⚠️ {{ error_message }}
+      </div>
+      <a class="back-button" href="{{ url_for('home') }}">⬅ Back to Home</a>
+    {% endif %}
   </div>
 </body>
 </html>
