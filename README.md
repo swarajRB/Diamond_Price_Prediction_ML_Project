@@ -191,7 +191,8 @@ Clarity: VS2
 
 
 
-## 🌐 Live Demo link - [Diamond Price Predictor on Render]([https://your-render-url.onrender.com](https://diamondpriceprediction-wdh4.onrender.com))
+## 🌐 Live Demo link - 
+[Diamond Price Predictor on Render]([https://your-render-url.onrender.com](https://diamondpriceprediction-wdh4.onrender.com))
 
 ### 📁 Files for Deployment
 
