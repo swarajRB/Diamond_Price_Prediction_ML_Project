@@ -81,11 +81,13 @@ Exploratory Data Analysis was performed to identify patterns, outliers, and rela
 
 ## 🧰 Tech Stack
 
-* Python
+* Python,Jupyter
 * Pandas, NumPy
 * Scikit-learn
 * Matplotlib, Seaborn
 * Flask
+* HTML
+* IDE - VS Code
 * Gunicorn
 * Render (Deployment)
 
