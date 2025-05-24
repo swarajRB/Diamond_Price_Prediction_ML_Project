@@ -37,5 +37,8 @@ def predict_datapoint():
         return render_template('form.html',final_result=results)
     
 
-if __name__=="__main__":
-    app.run(host='0.0.0.0',debug=True)
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Render sets this environment variable
+    app.run(host='0.0.0.0', port=port)
